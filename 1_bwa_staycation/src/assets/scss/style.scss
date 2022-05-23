@@ -1,0 +1,249 @@
+/*!
+ * Bootstrap v4.6.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+//fonts include
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "colorVariable";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "container-grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+.brand-text-icon {
+  font-size: 24px;
+  font-weight: 500;
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+header {
+  border-bottom: 1px solid $gray-200;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.navbar {
+  height: 80px;
+  ul.navbar-nav {
+    li.nav-item {
+      &.active {
+        a.nav-link {
+          color: $primary;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      a {
+        &.nav-link {
+          letter-spacing: 0.5px;
+          color: $gray-900;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+.img-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.img-content {
+  object-fit: content;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  &.bordered {
+    border: 1px solid $gray-200;
+  }
+  border-radius: 15px;
+
+  .tag {
+    z-index: 3;
+    font-size: 0.875rem;
+    background-color: $pink;
+    padding: 0.25rem 1.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $white;
+    min-height: 30px;
+    border-radius: 0px 15px;
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .img-wrapper {
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+  }
+
+  .meta-wrapper {
+    margin-top: 1rem;
+    h5 {
+      font-size: 1.125rem;
+      margin-bottom: 2px;
+    }
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  &.card-featured {
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1.1);
+      transition: 0.5s transform ease-in-out;
+      z-index: 2;
+      @include gradient-y(rgba($black, 0), rgba($black, 0.51), 0%, 100%);
+    }
+    .img-wrapper {
+      z-index: 1;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1.1);
+      transition: 0.25s transform ease-in-out;
+    }
+    .meta-wrapper {
+      z-index: 4;
+      color: white;
+      padding: 28px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      transform: translateY(0);
+      transition: 0.3s transform ease-in-out;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+    &:hover {
+      .meta-wrapper {
+        transform: translateY(-10px);
+      }
+      &:after {
+        transform: scale(1);
+      }
+      .img-wrapper {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.testimonial-hero,
+.testimonial-hero img {
+  width: 365px;
+  height: 500px;
+}
+
+footer {
+  border-top: 1px solid $gray-200;
+  padding: 50px;
+
+  .brand-tagline {
+    margin-top: 8px;
+    color: $gray-500;
+    font-weight: 300px;
+  }
+
+  .list-group-item {
+    padding: 0.3125rem 0;
+    border: 0;
+    a,
+    span {
+      color: $gray-500;
+      font-weight: 300;
+    }
+    a {
+      @include hover-focus {
+        color: $gray-800;
+      }
+    }
+  }
+  .copyright {
+    margin: 50px 0;
+    font-weight: 300;
+    color: $gray-500;
+  }
+}
+
+main {
+  p {
+    color: $gray-400;
+    font-weight: 300;
+  }
+}

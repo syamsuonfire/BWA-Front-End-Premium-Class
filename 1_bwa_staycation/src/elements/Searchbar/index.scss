@@ -1,0 +1,40 @@
+@import "../../assets/scss/colorVariable";
+
+.search-bar {
+  margin-bottom: 20px;
+  position: relative;
+  .input-group {
+    background-color: $white;
+    border-radius: 4px !important;
+    .input-group-text {
+      pointer-events: none;
+      border: 0;
+      cursor: auto;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      background-color: $gray-100;
+      color: $gray-900;
+      font-weight: 500;
+      z-index: 999;
+    }
+    .form-control {
+      border: 0;
+      border-radius: 4px;
+      outline: 0;
+      box-shadow: none;
+      background-color: $gray-100;
+      color: $pink;
+      padding: 0.575rem 4px ;
+      height: 45px;
+      &::placeholder {
+        color: $gray-200;
+      }
+      option{
+        background-color: $gray-100;
+        border: 0;
+        border-radius: 20px;
+      }
+    }
+  }
+}

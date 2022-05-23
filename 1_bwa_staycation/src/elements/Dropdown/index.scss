@@ -1,0 +1,41 @@
+@import "../../assets/scss/colorVariable";
+
+.select-dropdown {
+  margin-bottom: 20px;
+  position: relative;
+  .input-group {
+    background-color: $white;
+    border-radius: 4px !important;
+    .input-group-text {
+      pointer-events: none;
+      border: 0;
+      cursor: auto;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      background-color: $gray-100;
+      color: $gray-900;
+      font-weight: 500;
+      z-index: 999;
+    }
+    .custom-select {
+      border: 0;
+      border-radius: 4px;
+      outline: 0;
+      box-shadow: none;
+      background-color: $gray-100;
+      color: $pink;
+      padding: 0.575rem 4px;
+      height: 45px;
+      background-image: url("/assets/images/icons/icon-arrowDown.svg");
+      background-position: calc(100% - 10px), calc(100% - 10px), 100% 0;
+      background-size: 21px;
+      background-repeat: no-repeat;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      &::placeholder {
+        color: $gray-200;
+      }
+    }
+  }
+}

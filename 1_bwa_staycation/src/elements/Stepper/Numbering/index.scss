@@ -1,0 +1,70 @@
+@import "../../../assets/scss/colorVariable";
+
+$stepperMainColor: $gray-200;
+$size: 50px;
+
+ol.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    color: $white;
+
+    &:after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      width: $size;
+      height: $size;
+      border-radius: $size;
+      background-image: url('data:image/svg+xml;utf8,<svg width="34" height="21" viewBox="0 0 34 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7L12.108 17.987C12.8705 18.8158 14.1666 18.8519 14.9741 18.0669L31.5 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $teal;
+      transform: scale(1);
+      transition: 0.35s transform ease-in-out;
+    }
+    &:not(:last-child) {
+      margin-right: 60px;
+      &:before {
+        content: "";
+        z-index: -2;
+        top: 50%;
+        left: 100%;
+        position: absolute;
+        width: $size + 10;
+        height: 1px;
+        background-color: $stepperMainColor;
+      }
+    }
+    &.active {
+      &:after {
+        z-index: -1;
+        background: $white;
+        border: 1px solid $stepperMainColor;
+        transform: scale(1.2);
+      }
+      background-color: $stepperMainColor;
+      color: $gray-500;
+
+      & ~ li {
+        color: $gray-500;
+        background: $stepperMainColor;
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}

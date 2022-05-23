@@ -1,0 +1,87 @@
+@import "../../assets/scss/colorVariable";
+
+// .pagination {
+//   margin: 0;
+//   padding: 0;
+//   position: relative;
+//   .page-item {
+//     margin-left: 10px;
+//     padding: 0;
+//     .page-link {
+//       padding: 0;
+//       height: 40px;
+//       width: 40px;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       border-radius: 4px;
+//       background-color: $gray-100;
+//       border: 0;
+//       color: $gray-900;
+//       outline: 0;
+//       box-shadow: none;
+//       &:hover {
+//         color: #ffffff;
+//         background-color: $pink;
+//         transition: 0.4s;
+//       }
+//       &:active {
+//         color: #ffffff;
+//         background-color: $pink;
+//         outline: none;
+//       }
+//       &-arrow {
+//         &:hover {
+//           background-color: $gray-900;
+//         }
+//         &:active {
+//           background-color: $gray-900;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.pagination {
+  .paginationBttns {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    a {
+      padding: 8px 16px;
+      margin: 5px;
+      text-decoration: none;
+
+      background: #f6f6f6;
+      color: $gray-900;
+      border-radius: 4px;
+      transform: rotate(-180deg);
+      cursor: pointer;
+
+      &:hover {
+        color: #f6f6f6;
+        background: $pink;
+      }
+    }
+    .paginationActive a {
+      color: #f6f6f6;
+      background: $pink;
+    }
+
+    .previousbttn {
+      color: $gray-900;
+      background-color: $gray-100;
+      &:hover {
+        background-color: $gray-900;
+      }
+    }
+    .nextbttn {
+      color: $gray-900;
+      background-color: $gray-100;
+      &:hover {
+        color: #f6f6f6;
+        background-color: $gray-900;
+      }
+    }
+  }
+}
