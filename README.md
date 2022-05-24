@@ -4,7 +4,7 @@
 ## List Class
 <ol>
   <li>Staycation - Website Search and Book Hotel/Apartment (using Create React App and Bootstrap)</li>
-  <li>Storegg - Website Top Up Voucher game (using Next.js and Bootstrap)</li>
+  <li>Storegg - Website Top Up Voucher game (using Next.js with TypeScript and Bootstrap)</li>
   <li>Luxspace - Website Furniture Store (using Create React App and Tailwind CSS)</li>
 </ol>
 
